@@ -63,12 +63,18 @@ function App() {
     setItems(newItems);
   };
 
+  const totalNumberOfItems = items.length;
+  const packedItems = items.filter((item) => item.packed === true).length;
+
   return (
     <>
       <BackgroundHeading />
 
       <main>
-        <Header />
+        <Header
+          totalNumberOfItems={totalNumberOfItems}
+          packedItems={packedItems}
+        />
         <ItemList
           items={items}
           handleDeleteItem={handleDeleteItem}
