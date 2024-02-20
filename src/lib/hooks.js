@@ -7,4 +7,3 @@ export function useItemsContext() {
     throw new Error("useItemsContext must be used within a ItemsProvider");
   }
   return context;
-}
